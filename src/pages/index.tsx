@@ -1,9 +1,12 @@
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import { signOut, useSession } from 'next-auth/react';
 
 export default function Home() {
+  const { data } = useSession();
+
   return (
-    <h1>Oi</h1>
+    <pre>
+      {JSON.stringify(data, null, 2)}
+      <button onClick={() => signOut()}>Deslogar</button>
+    </pre>
   )
 }
