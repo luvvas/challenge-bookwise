@@ -1,11 +1,18 @@
-import { LoginContainer, LogoSection, WelcomeSection } from "@/styles/pages/login";
+import Head from "next/head";
 
 import { AuthButtons } from "@/components/AuthButtons";
 import { Text, Heading } from "@/components/typography";
 
+import { LoginContainer, LogoSection, WelcomeSection } from "@/styles/pages/login";
+
 export default function Login() {
   return (
     <LoginContainer>
+      <Head>
+        <title>Login | Bookwise</title>
+        <link rel="shortcut icon" href="/images/favicon.svg" type="image/svg" />
+      </Head>
+
       <LogoSection>
         <img src="/images/logo.svg" alt="Bookwise Logo"/>
       </LogoSection>
