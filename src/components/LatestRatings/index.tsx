@@ -33,7 +33,7 @@ export const LatestRatings = () => {
               id: "dassdjkfasdjk",
               name: "John Doe",
               author: "John Doe",
-              summary: "John Doe",
+              summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc molestie fermentum neque, non venenatis dui commodo id. In id justo ac lacus mattis placerat. Aliquam eget dapibus mi, gravida faucibus nunc. Maecenas pulvinar, ex eget sollicitudin euismod, est augue pulvinar mauris, sollicitudin rutrum magna sem quis est. Suspendisse sodales urna sit amet velit elementum imperdiet. Nam fringilla massa lacus, a finibus magna eleifend nec. In pellentesque pretium risus, ac euismod ipsum congue nec. Vivamus eget maximus libero. Nunc et leo blandit, lacinia nisi nec, feugiat justo. Quisque sodales consectetur velit non posuere.",
               total_pages: 100,
               cover_url: "https://avatars.githubusercontent.com/u/118952443?v=4"
             },
