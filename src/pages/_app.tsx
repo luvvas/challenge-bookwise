@@ -1,9 +1,11 @@
 import { ReactElement, ReactNode } from 'react'
 import type { AppProps } from 'next/app'
 import { SessionProvider } from 'next-auth/react'
+import { QueryClientProvider } from '@tanstack/react-query'
 import { NextPage } from 'next'
 import { Nunito } from 'next/font/google'
 
+import { queryClient } from '@/lib/react-query'
 import { globalStyles } from '@/styles/global'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -25,10 +27,12 @@ export default function App({
   const getLayout = Component.getLayout ?? ((page) => page)
 
   return (
-    <SessionProvider session={session}>
-      <div className={nunito.className}>
-        {getLayout(<Component {...pageProps} />)}
-      </div>
-    </SessionProvider>
+    <QueryClientProvider client={queryClient}>
+      <SessionProvider session={session}>
+        <div className={nunito.className}>
+          {getLayout(<Component {...pageProps} />)}
+        </div>
+      </SessionProvider>
+    </QueryClientProvider>
   )
 }
