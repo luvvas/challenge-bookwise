@@ -28,13 +28,13 @@ export const UserRatingCard = ({ rating }: UserRatingCardProps) => {
         <section>
           <Link href={`/profile/${rating.user_id}`}>
             <Avatar alt={rating.user.name} src={rating.user.avatar_url!} />
+          </Link>
             <div>
               <Heading size="xs">{rating.user.name}</Heading>
               <Text size="sm" color="gray-400">
                 {distance}
               </Text>
             </div>
-          </Link>
         </section>
 
         <RatingStars rating={rating.rate}/>
